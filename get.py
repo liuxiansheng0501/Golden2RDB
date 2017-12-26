@@ -7,7 +7,7 @@
 # @Software: PyCharm
 import os
 import pandas as pd
-def OneWtgsWithMultiTags(classpath="./Lib/my.golden.jar",host="192.168.0.37",port=6327,user="sa",passwd="golden",wtgs_id='10001001', tag_list=['giwindturbineoperationmode','grgridactivepower'], start_time="2017-10-01 00:00:00", end_time="2017-10-01 00:01:00"):#查数据
+def OneWtgsWithMultiTags(classpath="./Lib/my.golden.jar",host="192.168.0.37",port=6327,user="mywind",passwd="MyData@2018",wtgs_id='10001001', tag_list=['giwindturbineoperationmode','grgridactivepower'], start_time="2017-10-01 00:00:00", end_time="2017-10-01 00:01:00"):#查数据
     os.environ['CLASSPATH'] = classpath
     from jnius import autoclass
     assert type(wtgs_id)==str,'请输入字符型机组号, as \'10001001\'！'
@@ -58,7 +58,7 @@ def OneWtgsWithMultiTags(classpath="./Lib/my.golden.jar",host="192.168.0.37",por
     server.close()
     return return_val
 
-def MultiWtgsWithOneTag(classpath="./Lib/my.golden.jar",host="192.168.0.37",port=6327,user="sa",passwd="golden",wtgs_list=['10001001','10001002'], tag='giwindturbineoperationmode', start_time="2017-10-01 00:00:00", end_time="2017-10-01 00:01:00"):#查数据
+def MultiWtgsWithOneTag(classpath="./Lib/my.golden.jar",host="192.168.0.37",port=6327,user="mywind",passwd="MyData@2018",wtgs_list=['10001001','10001002'], tag='giwindturbineoperationmode', start_time="2017-10-01 00:00:00", end_time="2017-10-01 00:01:00"):#查数据
     os.environ['CLASSPATH'] = classpath
     from jnius import autoclass
     assert type(wtgs_list)==list,'请输入列表型机组号, as [\'10001001\',\'10001002\']！'
